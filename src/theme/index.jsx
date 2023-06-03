@@ -6,17 +6,26 @@ export const Container = styled.div`
     margin: 0 auto;
     border-radius: 8px;
     box-shadow: 0 5px 25px #00000035;
-    padding: 16px;
+    
     position: relative;
+    background-color: #dedede
 `;
 export const ContainerScrol = styled.div`
-    width: calc( 100% - 32px);
-    height: calc( 100% - 88PX);
+    width: 100%;
+    height: calc( 100% - 132PX);
     overflow: auto;
     position: absolute;
     bottom: 16px;
-    left: 16px;
+    left: 0;
+    padding: 16px;
     
+`;
+
+export const Header = styled.header`
+    margin-top:20px;
+    padding: 2px;
+    background-color: #62659a;
+    border-radius: 0 0 25px 25px;
 `;
 
 export const Row = styled.div`
@@ -25,6 +34,7 @@ export const Row = styled.div`
     gap: 6px;
     margin-bottom: 26px;
     &.list-item{
+        background-color: white;
         margin-bottom: 6px;
         box-shadow: 0 2px 10px #00000015;
         border-radius: 5px
@@ -36,7 +46,7 @@ export const Row = styled.div`
 export const TextInput = styled.input`
     height: 46px;
     border: 2px solid #C4C4C4;
-    border-radius: 5px;
+    border-radius: 0 0 0 15px ;
     padding-left: 16px;
     outline: none;
     &.w100{
@@ -62,12 +72,14 @@ text-align: center;
 background-color: blueviolet ;
 color: #fff;
 font-size: 24px;
-border: 0;
-border-radius: 5px;
+border: 2px solid white;
+border-radius: 0 20px 0 0;
 padding: 0;
 display: flex;
 align-items: center;
 justify-content: center;
+cursor: pointer;
+
 &.outlined{
     border: 2px solid blueviolet;
     color: blueviolet;
@@ -76,6 +88,7 @@ justify-content: center;
 &.rouned{
     border-radius:0 15px 0;
 }
+
 
 `;
 

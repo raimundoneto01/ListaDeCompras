@@ -1,6 +1,8 @@
-import { Button, ContainerScrol, Row, TextInput, Texth4 } from "../../theme";
+import { Button, ContainerScrol, Header, Row, TextInput, Texth4,  } from "../../theme";
 import 'boxicons';
 import { useState } from "react";
+import Title from "../Title/Title";
+import Alert from "../Alert/Alert";
 
 const Lista =()=>{
 
@@ -12,21 +14,26 @@ const Lista =()=>{
     }
     return(
         <>
-        <Row >
+        <Header>
+            <Title titulo = 'Lista de Compras'/>
+            
+            <Row >
                
                <TextInput className="w100" type="text" 
                value={Item}
                placeholder="Digite o Produto" 
                onChange={(e)=>setItem(e.target.value)}
                />
-               <Button onClick={()=>{setlista([...Lista, Item]);
+               <Button  onClick={()=>{setlista([...Lista, Item]);
                  setItem('');}}>
 
                <box-icon name='plus-circle' color='white'></box-icon>
                </Button>
                
            </Row>
-          
+        </Header>
+
+    
 
         <ContainerScrol>
             {
@@ -40,7 +47,7 @@ const Lista =()=>{
                 ))
             }
         </ContainerScrol>
-            
+            <Alert/>
         </>
     );
 };
